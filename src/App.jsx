@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './stylesheets/main.css'
+
+import React, { useState } from 'react'
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+
+import Navbar from './Navbar';
+import About from './pages/About'
+import Portfolio from './pages/Portfolio'
+import Resume from './pages/Resume'
+import Contact from './pages/Contact';
+
+import Capstone from './pages/grid/Capstone'
+import CharaDesign from './pages/grid/CharaDesign'
+import GraphicDesign from './pages/grid/GraphicDesign'
+import Illustrations from './pages/grid/Illustrations'
+import Pawfee from './pages/grid/Pawfee'
+import Reynbow from './pages/grid/Reynbow'
+import VideoEdit from './pages/grid/VideoEdit'
+import Vtuber from './pages/grid/Vtuber'
+import OtherArt from './pages/grid/OtherArt'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main className='app'>
+      <Router>
+        <Navbar/>
+
+        <Routes>
+          <Route path='*' element={<Navigate to='/portfolio/portfolio'/>} />
+          <Route path='/portfolio/about' element={<About />} />
+          
+          <Route path='/portfolio/portfolio' element={<Portfolio />} />
+
+          <Route path='/portfolio/capstone' element={<Capstone/>} />
+          <Route path='/portfolio/chara'    element={<CharaDesign/>} />
+          <Route path='/portfolio/graphic'  element={<GraphicDesign/>} />
+          <Route path='/portfolio/illust'   element={<Illustrations/>} />
+          <Route path='/portfolio/pawfee'   element={<Pawfee/>} />
+          <Route path='/portfolio/reynbow'  element={<Reynbow/>} />
+          <Route path='/portfolio/video'    element={<VideoEdit/>} />
+          <Route path='/portfolio/vtuber'   element={<Vtuber/>} />
+          <Route path='/portfolio/other'    element={<OtherArt/>} />
+
+          <Route path='/portfolio/resume' element={<Resume/>} />
+          <Route path='/portfolio/contact' element={<Contact/>} />
+        </Routes>
+
+
+      </Router>  
+      
+    </main>
+  );
 }
 
-export default App
+export default App;
