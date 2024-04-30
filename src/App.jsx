@@ -29,6 +29,7 @@ function App() {
         <Routes>
           <Route path='*' element={<Navigate to='/portfolio/portfolio'/>} />
           <Route path='/portfolio/about' element={<About />} />
+          <Route path='/portfolio/resume' element={<Resume/>} />
           
           <Route path='/portfolio/portfolio' element={<Portfolio />} />
 
@@ -42,13 +43,9 @@ function App() {
           <Route path='/portfolio/vtuber'   element={<Vtuber/>} />
           <Route path='/portfolio/other'    element={<OtherArt/>} />
 
-          <Route path='/portfolio/resume' element={<Resume/>} />
           <Route path='/portfolio/contact' element={<Contact/>} />
         </Routes>
-
-
       </Router>  
-      
     </main>
   );
 }
