@@ -19,31 +19,26 @@ import React, { useState } from 'react'
 
 function Vtuber() {
     const [isOpen, setIsOpen] = useState(false)
+    const [slideIndex, setSlideIndex] = useState(0);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen)
     }
 
 // Slideshow logic
-    let slideIndex = 1;
-    showSlides(slideIndex)
+    const nextSlide = () => {
+    setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    };
 
-    function nextSlide(n) {
-        showSlides(slideIndex += n)
-    }
+    const prevSlide = () => {
+    setSlideIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    };
 
-    function showSlides(n) {
-        let i
-        let slides = document.getElementsByClassName('slide')
-
-        if (n > slides.length) { slideIndex = 1 }
-        if ( n < 1) { slideIndex = slides.length }
-        
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none'
-        }
-        slides[slideIndex-1].style.display = 'block'
-    }
+    const slides = [
+    <img key={1} src={mura2_fullbody01} style={{ width: 410 }} />,
+    <img key={2} src={mura2_fullbody02} style={{ width: 410 }} />,
+    <img key={3} src={mura2_fullbody03} style={{ width: 410 }} />,
+    ];
 
     return (
         <div className='main_container'>
@@ -83,12 +78,18 @@ function Vtuber() {
 
                     <div className='grid_item'>
                         <div className='slideshow'>
-                            <div className='slide fade'><img src={mura2_fullbody01} style={{width: 410}}/></div>
-                            <div className='slide fade'><img src={mura2_fullbody02} style={{width: 410}}/></div>
-                            <div className='slide fade'><img src={mura2_fullbody03} style={{width: 410}}/></div>
+                            {slides.map((slide, index) => (
+                                <div
+                                key={index}
+                                className='slide fade'
+                                style={{ display: index === slideIndex ? 'block' : 'none' }}
+                                >
+                                {slide}
+                                </div>
+                            ))}
 
-                            <a className='prev' onClick={() => nextSlide(-1)}>&#8249;</a>
-                            <a className='next' onClick={() => nextSlide(1)}>&#8250;</a>
+                            <a className='prev' onClick={prevSlide}>&#8249;</a>
+                            <a className='next' onClick={nextSlide}>&#8250;</a>
                         </div>
                     </div>
                 </div>
