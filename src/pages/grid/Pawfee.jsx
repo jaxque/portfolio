@@ -26,17 +26,17 @@ function Pawfee() {
                 <div className='subheader'>Brand Logo</div>
                 <div className='content'>The small paw pads, the "toe beans", are drawn as coffee beans.</div>
 
-                <div className='grid_container2' style={{alignItems: 'center', columnGap: 60}}>
+                <div className='grid_container2' style={{alignItems: 'center', columnGap: 60, marginLeft: 50}}>
                     <div className='grid_item'><img src={draftIcons} style={{width: 400}}/></div>
                     <div className='grid_item'><img src={revision01} style={{width: 280}}/></div>
                 </div>
 <br/><br/>
-                <div className='grid_container2'>
+                <div className='grid_container2' style={{marginLeft: 50}} >
                     <div className='grid_item'><img src={palettes01} style={{width: 400}}/></div>
                     <div className='grid_item'><img src={palettes02} style={{width: 400}}/></div>
                 </div>
                 <br/><br/><br/>
-                <div className='grid_container2' style={{columnGap: 75}}>
+                <div className='grid_container2' style={{columnGap: 75, marginLeft: 100}}>
                 <div className='grid_item' style={{width: 400}}>
                     <div className='subheader' style={{fontSize: 20}}>Final Logo</div>
                     <div className='content'>
@@ -120,7 +120,7 @@ function Pawfee() {
                 </table>
 <br/>
 {/* draw more to make a slideshow ? */}
-                <img style={{width: 800}} src={draftDrinks}/>
+                <img style={{width: 800, marginLeft: 50}} src={draftDrinks}/>
                 <p style={{fontFamily: 'Rubik', textAlign: 'center'}}>Concept art of coffee drinks</p>
             </div>
 

@@ -9,7 +9,16 @@ function CharaDesign() {
     return (
         <div className='main_container'>
             <div className="header">Character Design</div>
-            
+
+            <div className='sub_container'>
+                <div className='grid_container2' style={{gap: 10, marginLeft: 40}}>
+                    <div className='grid_item'><img src={chara01} style={{width: 400}}/></div>
+                    <div className='grid_item'><img src={chara02} style={{width: 400}}/></div>
+                    <div className='grid_item'><img src={chara03} style={{width: 400}}/></div>
+                    <div className='grid_item'><img src={chara04} style={{width: 400}}/></div>
+                </div>
+            </div>
+
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import '../../stylesheets/page.css'
+import '../../stylesheets/slideshow.css'
 
 import mura1_emotes from '../../assets/vtuber/mura1_emotes.png'
 import mura1_fullbody from '../../assets/vtuber/mura1_fullbody.png'
@@ -23,6 +24,27 @@ function Vtuber() {
         setIsOpen(!isOpen)
     }
 
+// Slideshow logic
+    let slideIndex = 1;
+    showSlides(slideIndex)
+
+    function nextSlide(n) {
+        showSlides(slideIndex += n)
+    }
+
+    function showSlides(n) {
+        let i
+        let slides = document.getElementsByClassName('slide')
+
+        if (n > slides.length) { slideIndex = 1 }
+        if ( n < 1) { slideIndex = slides.length }
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none'
+        }
+        slides[slideIndex-1].style.display = 'block'
+    }
+
     return (
         <div className='main_container'>
             <div className="header">VTuber: Murase Lune</div>
@@ -41,7 +63,7 @@ function Vtuber() {
                     In early 2021, I spent about five months designing my VTuber and creating
                     assets for streaming and for the associated social media accounts.<br/><br/>
                     
-                    <img src={mura1_ref} width={800}/>
+                    <img src={mura1_ref} style={{marginLeft: 50, width: 800}}/>
                 </div>
             </div>
 
@@ -56,13 +78,23 @@ function Vtuber() {
                     These leisurely trips are presented as streams and the passengers are the viewers. <br/>
                 </div>
 <br/>
-                <div className='grid_container'>
+                <div className='grid_container2' style={{gap: 20, marginLeft: 30}}>
                     <div className='grid_item'> <img src={mura2_vector} style={{width: 400}}/> </div>
-                    {/* image carousel for fullbody */}
+
+                    <div className='grid_item'>
+                        <div className='slideshow'>
+                            <div className='slide fade'><img src={mura2_fullbody01} style={{width: 410}}/></div>
+                            <div className='slide fade'><img src={mura2_fullbody02} style={{width: 410}}/></div>
+                            <div className='slide fade'><img src={mura2_fullbody03} style={{width: 410}}/></div>
+
+                            <a className='prev' onClick={() => nextSlide(-1)}>&#8249;</a>
+                            <a className='next' onClick={() => nextSlide(1)}>&#8250;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    )
+        )
 }
 
 export default Vtuber

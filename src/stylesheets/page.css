@@ -3,17 +3,20 @@
     max-width: 1000px;
     height: 100%;
 
+    margin-top: 20px;
     margin-left: 100px;
     padding: 10px;
+    /* background-color: lightblue; */
 }
 
 .sub_container {
-    width: 800px;
-    display: block;
+    width: 900px;
+    /* display: block; */
 
-    margin: 20px;
+    margin-left: 50px;
     margin-bottom: 40px;
-    padding: 10px;
+    padding: 10px;    
+    /* background-color: skyblue; */
 }
 
 .header {
@@ -24,6 +27,8 @@
     font-family: 'Expletus Sans';
     font-size: 30px;
     font-weight: bold;
+    
+    color: #8e75f3;
 }
 
 .subheader {

@@ -3,6 +3,7 @@ import '../../stylesheets/page.css'
 import chara from '../../assets/chara-design/chara_02.png'
 import graphic from '../../assets/graphic-design/catbot_icon.png'
 import illust from '../../assets/illustrations/headshot_lum.png'
+import geo from '../../assets/geo/geo-black.png'
 import reynbow from '../../assets/reynbow/reynbow_icon_01.png'
 import other from '../../assets/other-art/winter_redcardinal_illust.png'
 import pawfee from '../../assets/pawfee/revision_02.png'
@@ -18,7 +19,7 @@ function PortfolioGrid() {
                 </div>
 
                 <div className='grid_item'>
-                    <a href='/portfolio/graphic'><img className='grid_img' src={graphic}/></a>
+                    <a href='/portfolio/graphic'><img className='grid_img' src={graphic} style={{objectFit: 'contain'}}/></a>
                     <div className='desc'>Graphic Design</div>
                 </div>
 
@@ -28,6 +29,7 @@ function PortfolioGrid() {
                 </div>
 
                 <div className='grid_item'>
+                    <a href='/portfolio/capstone'><img className='grid_img' src={geo} style={{objectFit: 'contain'}}/></a>
                     <div className='desc'>Geo: Hello-Sol</div>
                 </div>
 
