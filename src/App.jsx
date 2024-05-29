@@ -1,14 +1,10 @@
 import './stylesheets/main.css'
 
-import React, { useState } from 'react'
-import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-
 import Navbar from './Navbar';
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Resume from './pages/Resume'
 import Contact from './pages/Contact';
-
 import Capstone from './pages/grid/Capstone'
 import CharaDesign from './pages/grid/CharaDesign'
 import GraphicDesign from './pages/grid/GraphicDesign'
@@ -18,6 +14,9 @@ import Reynbow from './pages/grid/Reynbow'
 import VideoEdit from './pages/grid/VideoEdit'
 import Vtuber from './pages/grid/Vtuber'
 import OtherArt from './pages/grid/OtherArt'
+
+import React, { useState } from 'react'
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 function App() {
 

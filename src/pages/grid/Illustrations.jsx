@@ -16,7 +16,46 @@ import personaMura from '../../assets/illustrations/persona_mura.png'
 import vio_tagteam from '../../assets/illustrations/vio_tagteam_nocard.png'
 import zarya from '../../assets/illustrations/zarya_thumbnail.png'
 
+import React, { useRef, useEffect, useState } from 'react';
+import { BackToTop } from '../BackToTop'
+
 function Illustrations() {
+    const [loadedImages, setLoadedImages] = useState({});
+    const observer = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1,
+        };
+        observer.current = new IntersectionObserver(handleIntersection, options);
+
+        document.querySelectorAll('.lazy-load').forEach(img => {
+            observer.current.observe(img);
+        });
+
+        return () => {
+            if (observer.current) {
+                observer.current.disconnect();
+            }
+        };
+    }, []);
+
+    const handleIntersection = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                observer.current.unobserve(lazyImage);
+                setLoadedImages(prevState => ({
+                    ...prevState,
+                    [lazyImage.dataset.src]: true
+                }));
+            }
+        });
+    };
+
     return (
         <div className='main_container'>
             <div className="header">Illustrations</div>
@@ -24,23 +63,53 @@ function Illustrations() {
             <div className='sub_container'>
                 {/* Headshots */}
                 <div className='grid_container' style={{columnGap: 10, alignItems: 'center'}} >
-                    <div className='grid_item'><img src={paladin} style={{width: 290}}/></div>
-                    <div className='grid_item'><img src={lum} style={{width: 290}}/></div>
-                    <div className='grid_item'><img src={naki} style={{width: 290}}/></div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[paladin] ? 'loaded' : ''}`}
+                             data-src={paladin} style={{width: 290}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[lum] ? 'loaded' : ''}`}
+                             data-src={lum} style={{width: 290}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[naki] ? 'loaded' : ''}`}
+                             data-src={naki} style={{width: 290}}/>
+                    </div>
                 </div>
 
                 {/* Busts */}
                 <div className='grid_container2' style={{columnGap: 10, alignItems: 'center'}} >
-                    <div className='grid_item'><img src={cyno} style={{width: 440}}/></div>
-                    <div className='grid_item'><img src={alhaitham} style={{width: 440}}/></div>
-                    <div className='grid_item'><img src={personaMura} style={{width: 440}}/></div>
-                    <div className='grid_item'><img src={zarya} style={{width: 440}}/></div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[cyno] ? 'loaded' : ''}`} 
+                             data-src={cyno} style={{width: 440}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[alhaitham] ? 'loaded' : ''}`} 
+                             data-src={alhaitham} style={{width: 440}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[personaMura] ? 'loaded' : ''}`}
+                             data-src={personaMura} style={{width: 440}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[zarya] ? 'loaded' : ''}`}
+                             data-src={zarya} style={{width: 440}}/>
+                    </div>
                 </div>
 
                 <div className='grid_container' style={{columnGap: 10, alignItems: 'center'}} >
-                    <div className='grid_item'><img src={soma} style={{width: 290}}/></div>
-                    <div className='grid_item'><img src={paletteChallenge} style={{width: 290}}/></div>
-                    <div className='grid_item'><img src={satoryu} style={{width: 290}}/></div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[soma] ? 'loaded' : ''}`} 
+                             data-src={soma} style={{width: 290}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[paletteChallenge] ? 'loaded' : ''}`} 
+                             data-src={paletteChallenge} style={{width: 290}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[satoryu] ? 'loaded' : ''}`} 
+                             data-src={satoryu} style={{width: 290}}/>
+                    </div>
                 </div>
 
                 {/* <div className='grid_container' style={{columnGap: 10, alignItems: 'center'}}>
@@ -48,13 +117,22 @@ function Illustrations() {
                 </div> */}
 
                 <div className='grid_container' style={{columnGap: 10, alignItems: 'center'}} >
-                    <div className='grid_item'><img src={mia} style={{width: 290}}/></div>
-                    <div className='grid_item'><img src={vio_tagteam} style={{width: 290}}/></div>
-                    <div className='grid_item'><img src={miku} style={{width: 290}}/></div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[mia] ? 'loaded' : ''}`} 
+                             data-src={mia} style={{width: 290}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[vio_tagteam] ? 'loaded' : ''}`} 
+                             data-src={vio_tagteam} style={{width: 290}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[miku] ? 'loaded' : ''}`} 
+                             data-src={miku} style={{width: 290}}/>
+                    </div>
                 </div>
             </div>
 
-            {/* add button to go back to top */}
+            <div className='sub_container'><BackToTop/></div>
         </div>
     )
 }

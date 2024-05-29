@@ -28,7 +28,7 @@
     font-size: 30px;
     font-weight: bold;
     
-    color: #8e75f3;
+    color: #7c65d4;
 }
 
 .subheader {
@@ -36,10 +36,10 @@
 
     font-family: 'Expletus Sans';
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 800;
 
     text-align: left;
-    color: #8e75f3;
+    color: #7c65d4;
 }
 
 .content {
@@ -82,4 +82,13 @@ td {
     margin-top: 5px;
     font-family: 'Rubik';
     text-align: left;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.loaded {
+    opacity: 1;
 }

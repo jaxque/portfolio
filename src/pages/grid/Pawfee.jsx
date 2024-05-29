@@ -7,7 +7,46 @@ import palettes02 from '../../assets/pawfee/palettes_02.png'
 import revision01 from '../../assets/pawfee/revision_01.png'
 import revision02 from '../../assets/pawfee/revision_02.png'
 
+import React, { useRef, useEffect, useState } from 'react';
+import { BackToTop } from '../BackToTop'
+
 function Pawfee() {
+    const [loadedImages, setLoadedImages] = useState({});
+    const observer = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1,
+        };
+        observer.current = new IntersectionObserver(handleIntersection, options);
+
+        document.querySelectorAll('.lazy-load').forEach(img => {
+            observer.current.observe(img);
+        });
+
+        return () => {
+            if (observer.current) {
+                observer.current.disconnect();
+            }
+        };
+    }, []);
+
+    const handleIntersection = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                observer.current.unobserve(lazyImage);
+                setLoadedImages(prevState => ({
+                    ...prevState,
+                    [lazyImage.dataset.src]: true
+                }));
+            }
+        });
+    };
+
     return (
         <div className='main_container'>
             <div className="header">Pawfee Beans</div>
@@ -27,13 +66,25 @@ function Pawfee() {
                 <div className='content'>The small paw pads, the "toe beans", are drawn as coffee beans.</div>
 
                 <div className='grid_container2' style={{alignItems: 'center', columnGap: 60, marginLeft: 50}}>
-                    <div className='grid_item'><img src={draftIcons} style={{width: 400}}/></div>
-                    <div className='grid_item'><img src={revision01} style={{width: 280}}/></div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[draftIcons] ? 'loaded' : ''}`}
+                             data-src={draftIcons} style={{width: 400}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[revision01] ? 'loaded' : ''}`}
+                             data-src={revision01} style={{width: 280}}/>
+                    </div>
                 </div>
 <br/><br/>
                 <div className='grid_container2' style={{marginLeft: 50}} >
-                    <div className='grid_item'><img src={palettes01} style={{width: 400}}/></div>
-                    <div className='grid_item'><img src={palettes02} style={{width: 400}}/></div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[palettes01] ? 'loaded' : ''}`}
+                             data-src={palettes01} style={{width: 400}}/>
+                    </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[palettes02] ? 'loaded' : ''}`}
+                             data-src={palettes02} style={{width: 400}}/>
+                    </div>
                 </div>
                 <br/><br/><br/>
                 <div className='grid_container2' style={{columnGap: 75, marginLeft: 100}}>
@@ -45,7 +96,10 @@ function Pawfee() {
                         so that the coffee bean motif is more noticeable.
                     </div>
                 </div>
-                <div className='grid_item'><img src={revision02} style={{width: 260}}/></div>
+                <div className='grid_item'>
+                    <img className={`lazy-load fade-in ${loadedImages[revision02] ? 'loaded' : ''}`}
+                         data-src={revision02} style={{width: 260}}/>
+                </div>
             </div>
             </div>
 
@@ -120,7 +174,8 @@ function Pawfee() {
                 </table>
 <br/>
 {/* draw more to make a slideshow ? */}
-                <img style={{width: 800, marginLeft: 50}} src={draftDrinks}/>
+                <img className={`lazy-load fade-in ${loadedImages[draftDrinks] ? 'loaded' : ''}`}
+                     data-src={draftDrinks} style={{width: 800, marginLeft: 50}} />
                 <p style={{fontFamily: 'Rubik', textAlign: 'center'}}>Concept art of coffee drinks</p>
             </div>
 
@@ -133,8 +188,10 @@ function Pawfee() {
                     for Pawfee Beans.
                 </div>
             </div>
-
-            {/* Add button to go back up */}
+<br/><br/>
+            <div className='sub_container'>
+                <BackToTop/>
+            </div>
         </div>
     )
 }

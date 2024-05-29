@@ -19,6 +19,9 @@ import moodboard01 from '../../assets/graphic-design/wedding_moodboard_01.png'
 import moodboard02 from '../../assets/graphic-design/wedding_moodboard_02.png'
 import moodboard03 from '../../assets/graphic-design/wedding_moodboard_03.png'
 
+import React, { useRef, useEffect, useState } from 'react';
+import { BackToTop } from '../BackToTop'
+
 function GraphicDesign() {
     return (
         <div className='main_container'>
@@ -44,6 +47,8 @@ function GraphicDesign() {
                 </div>
                 <img src={genshin_icons} style={{width: 800}} />
             </div>
+
+            <div className='sub_container'><BackToTop/></div>
         </div>
     )
 }

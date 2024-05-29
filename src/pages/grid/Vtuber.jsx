@@ -15,17 +15,19 @@ import mura2_schedule02 from '../../assets/vtuber/mura2_schedule_02.png'
 import mura2_screen from '../../assets/vtuber/mura2_screen.gif'
 import mura2_vector from '../../assets/vtuber/mura2_vector.jpeg'
 
-import React, { useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react';
+import { BackToTop } from '../BackToTop'
 
 function Vtuber() {
     const [isOpen, setIsOpen] = useState(false)
-    const [slideIndex, setSlideIndex] = useState(0);
-
+    
     const toggleDropdown = () => {
         setIsOpen(!isOpen)
     }
 
 // Slideshow logic
+    const [slideIndex, setSlideIndex] = useState(0);
+
     const nextSlide = () => {
     setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
@@ -39,6 +41,43 @@ function Vtuber() {
     <img key={2} src={mura2_fullbody02} style={{ width: 410 }} />,
     <img key={3} src={mura2_fullbody03} style={{ width: 410 }} />,
     ];
+
+// Lazy load
+    const [loadedImages, setLoadedImages] = useState({});
+    const observer = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1,
+        };
+        observer.current = new IntersectionObserver(handleIntersection, options);
+
+        document.querySelectorAll('.lazy-load').forEach(img => {
+            observer.current.observe(img);
+        });
+
+        return () => {
+            if (observer.current) {
+                observer.current.disconnect();
+            }
+        };
+    }, []);
+
+    const handleIntersection = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                observer.current.unobserve(lazyImage);
+                setLoadedImages(prevState => ({
+                    ...prevState,
+                    [lazyImage.dataset.src]: true
+                }));
+            }
+        });
+    };
 
     return (
         <div className='main_container'>
@@ -58,7 +97,8 @@ function Vtuber() {
                     In early 2021, I spent about five months designing my VTuber and creating
                     assets for streaming and for the associated social media accounts.<br/><br/>
                     
-                    <img src={mura1_ref} style={{marginLeft: 50, width: 800}}/>
+                    <img className={`lazy-load fade-in ${loadedImages[mura1_ref] ? 'loaded' : ''}`}
+                         data-src={mura1_ref} style={{marginLeft: 50, width: 800}}/>
                 </div>
             </div>
 
@@ -74,18 +114,17 @@ function Vtuber() {
                 </div>
 <br/>
                 <div className='grid_container2' style={{gap: 20, marginLeft: 30}}>
-                    <div className='grid_item'> <img src={mura2_vector} style={{width: 400}}/> </div>
+                    <div className='grid_item'>
+                        <img className={`lazy-load fade-in ${loadedImages[mura2_vector] ? 'loaded' : ''}`}
+                             data-src={mura2_vector} style={{width: 400}}/>
+                    </div>
 
                     <div className='grid_item'>
                         <div className='slideshow'>
                             {slides.map((slide, index) => (
-                                <div
-                                key={index}
-                                className='slide fade'
-                                style={{ display: index === slideIndex ? 'block' : 'none' }}
-                                >
-                                {slide}
-                                </div>
+                                <div key={index} className='slide fade' 
+                                     style={{ display: index === slideIndex ? 'block' : 'none' }}
+                                > {slide} </div>
                             ))}
 
                             <a className='prev' onClick={prevSlide}>&#8249;</a>
@@ -94,6 +133,8 @@ function Vtuber() {
                     </div>
                 </div>
             </div>
+
+            <div className='sub_container'><BackToTop/></div>
         </div>
         )
 }
