@@ -8,8 +8,11 @@ function Capstone() {
             <div className='sub_container'>
                 <div className='subheader'>Introduction</div>
                 <div className='content'>
-                    For my capstone project in my final year of university, my group decided to
-                    develop an interactive website that advertises our fictitious car brand named Geo.
+                    For my capstone project in my final year of university, my group developed an interactive microsite that
+                    advertises a fictitious car brand named Geo. Our goal was to promote our concept of an electric car model as
+                    gen-z as our target audience. This website includes dynamic scroll animations, a 3D car configurator, and a
+                    sandbox minigame where the user may use their cutomized car.<br/><br/>
+                    Visit the website here: <a href={'https://rachelleelcn.github.io/Hello-Sol/learn'} target='_blank'>Hello-Sol</a>
                 </div>
             </div>
         </div>

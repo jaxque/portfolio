@@ -6,6 +6,10 @@ function VideoEdit() {
             <div className="header">Video Editing</div>
             
             <div className='sub_container'>
+                <div className='content'>
+                    All videos were edited using Adobe Premiere Pro.
+                </div>
+<br/>
                 <div className='grid_container2' style={{gap: 10}}>
                     <div className='grid_item'>
                         <iframe width='445' height='250' style={{border: 'none'}}

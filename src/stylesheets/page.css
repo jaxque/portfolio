@@ -15,7 +15,7 @@
 
     margin-left: 50px;
     margin-bottom: 40px;
-    padding: 10px;    
+    padding: 10px;
     /* background-color: skyblue; */
 }
 
@@ -64,6 +64,10 @@ td {
 .grid_container2 {
     display: inline-grid;
     grid-template-columns: auto auto;
+}
+
+.grid_item {
+    cursor: pointer;
 }
 
 .grid_img {

@@ -1,6 +1,7 @@
 import '../../stylesheets/page.css'
 
 import chara from '../../assets/chara-design/chara_02.png'
+import dnx_banner from '../../assets/dnx/ranked_banner.png'
 import graphic from '../../assets/graphic-design/catbot_icon.png'
 import illust from '../../assets/illustrations/headshot_lum.png'
 import geo from '../../assets/geo/geo-black.png'
@@ -19,6 +20,16 @@ function PortfolioGrid() {
                 </div>
 
                 <div className='grid_item'>
+                    <a href='/portfolio/dnx'><img className='grid_img' src={dnx_banner} style={{objectFit: 'contain'}}/></a>
+                    <div className='desc'>Dueling Nexus</div>
+                </div>
+
+                <div className='grid_item'>
+                    <a href='/portfolio/capstone'><img className='grid_img' src={geo} style={{objectFit: 'contain'}}/></a>
+                    <div className='desc'>Geo: Hello-Sol</div>
+                </div>
+
+                <div className='grid_item'>
                     <a href='/portfolio/graphic'><img className='grid_img' src={graphic} style={{objectFit: 'contain'}}/></a>
                     <div className='desc'>Graphic Design</div>
                 </div>
@@ -26,11 +37,6 @@ function PortfolioGrid() {
                 <div className='grid_item'>
                     <a href='/portfolio/illust'><img className='grid_img' src={illust}/></a>
                     <div className='desc'>Illustrations</div>
-                </div>
-
-                <div className='grid_item'>
-                    <a href='/portfolio/capstone'><img className='grid_img' src={geo} style={{objectFit: 'contain'}}/></a>
-                    <div className='desc'>Geo: Hello-Sol</div>
                 </div>
 
                 <div className='grid_item'>

@@ -21,6 +21,17 @@ function Resume() {
                 <div className='subheader'>Work Experience</div>
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
+                        <b>Freelance Graphic Designer & Illustrator </b >&nbsp;|&nbsp; Deuling Nexus
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                        Dec 2023 - Present
+                    </group><br/>
+                    • &nbsp; Created stylized banner illustrations for website visuals and buttons <br/>
+                    • &nbsp; Provided a character reference sheet for a plush design of website mascot
+                </div>
+<br/>
+                <div className='content'>
+                    <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Retail Salesperson</b >&nbsp;|&nbsp; Team Aquatic Supplies - Ottawa, ON
                         &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
                         &nbsp; &nbsp; &nbsp;
@@ -88,22 +99,14 @@ function Resume() {
                 <div className='subheader'>Education</div>
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
-                        <b>Algonquin College</b> - Ottawa, ON
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
-                        Sept 2019 - April 2024
-                    </group><br/>
-                    Advanced Diploma - Interactive Multimedia & Design
-                </div>
-<br/>
-                <div className='content'>
-                    <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Carleton University</b> - Ottawa, ON
                         &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                         &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;&nbsp;&nbsp;
                         Sept 2019 - April 2024
                     </group><br/>
-                    Bachelor's Degree in Information Technology - Interactive Multimedia & Design
+                    Bachelor of Information Technology - Interactive Multimedia & Design <br/>
+                    In collboration with Algonquin College Co-operative Education <br/>
+                    CGPA: 8.22
                 </div>
             </div>
 
@@ -116,7 +119,8 @@ function Resume() {
                     • &nbsp; Knowledgeable in web development &#40; HTML, CSS, JavaScript, React &#41;<br/>
                     • &nbsp; Familiar with using Figma and Canva<br/>
                     • &nbsp; Excellent communication and cooperation skills<br/>
-                    • &nbsp; Bilingual &#40; English and French &#41;<br/>
+                    • &nbsp; Eager to meet new people and learn new technologies<br/>
+                    • &nbsp; Languages: English, French, Korean
                 </div>
             </div>
 

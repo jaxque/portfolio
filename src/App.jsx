@@ -5,8 +5,10 @@ import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Resume from './pages/Resume'
 import Contact from './pages/Contact';
+
 import Capstone from './pages/grid/Capstone'
 import CharaDesign from './pages/grid/CharaDesign'
+import DNX from './pages/grid/DuelingNexus'
 import GraphicDesign from './pages/grid/GraphicDesign'
 import Illustrations from './pages/grid/Illustrations'
 import Pawfee from './pages/grid/Pawfee'
@@ -34,6 +36,7 @@ function App() {
 
           <Route path='/portfolio/capstone' element={<Capstone/>} />
           <Route path='/portfolio/chara'    element={<CharaDesign/>} />
+          <Route path='/portfolio/dnx'      element={<DNX/>} />
           <Route path='/portfolio/graphic'  element={<GraphicDesign/>} />
           <Route path='/portfolio/illust'   element={<Illustrations/>} />
           <Route path='/portfolio/pawfee'   element={<Pawfee/>} />

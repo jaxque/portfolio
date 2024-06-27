@@ -1,4 +1,5 @@
 import '../../stylesheets/page.css'
+import '../../stylesheets/modal.css'
 
 import draftDrinks from '../../assets/pawfee/draft_drinks.png'
 import draftIcons from '../../assets/pawfee/draft_icons.png'
@@ -9,9 +10,12 @@ import revision02 from '../../assets/pawfee/revision_02.png'
 
 import React, { useRef, useEffect, useState } from 'react';
 import { BackToTop } from '../BackToTop'
+import { Modal } from '../Modal'
 
 function Pawfee() {
     const [loadedImages, setLoadedImages] = useState({});
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [selectedImage, setSelectedImage] = useState(null)
     const observer = useRef(null);
 
     useEffect(() => {
@@ -47,6 +51,17 @@ function Pawfee() {
         });
     };
 
+    // Enlarge image when clicked on
+    const openModal = (imageSrc) => {
+        setSelectedImage(imageSrc)
+        setIsModalOpen(true)
+    }
+
+    const closeModal = () => {
+        setIsModalOpen(false)
+        setSelectedImage(null)
+    }
+
     return (
         <div className='main_container'>
             <div className="header">Pawfee Beans</div>
@@ -68,25 +83,41 @@ function Pawfee() {
                 <div className='grid_container2' style={{alignItems: 'center', columnGap: 60, marginLeft: 50}}>
                     <div className='grid_item'>
                         <img className={`lazy-load fade-in ${loadedImages[draftIcons] ? 'loaded' : ''}`}
-                             data-src={draftIcons} style={{width: 400}}/>
+                             data-src={draftIcons} 
+                             style={{width: 400}}
+                             onClick={() => openModal(draftIcons)}
+                             alt='First draft of icon design'
+                             />
                     </div>
                     <div className='grid_item'>
                         <img className={`lazy-load fade-in ${loadedImages[revision01] ? 'loaded' : ''}`}
-                             data-src={revision01} style={{width: 280}}/>
+                             data-src={revision01} 
+                             style={{width: 280}}
+                             onClick={() => openModal(revision01)}
+                             alt='First revision of icon design'
+                             />
                     </div>
                 </div>
 <br/><br/>
                 <div className='grid_container2' style={{marginLeft: 50}} >
                     <div className='grid_item'>
                         <img className={`lazy-load fade-in ${loadedImages[palettes01] ? 'loaded' : ''}`}
-                             data-src={palettes01} style={{width: 400}}/>
+                             data-src={palettes01}
+                             style={{width: 400}}
+                             onClick={() => openModal(palettes01)}
+                             alt='Second revision - Palette test 1'
+                             />
                     </div>
                     <div className='grid_item'>
                         <img className={`lazy-load fade-in ${loadedImages[palettes02] ? 'loaded' : ''}`}
-                             data-src={palettes02} style={{width: 400}}/>
+                             data-src={palettes02}
+                             style={{width: 400}}
+                             onClick={() => openModal(palettes02)}
+                             alt='Second revision - Palette test 2'
+                             />
                     </div>
                 </div>
-                <br/><br/><br/>
+<br/><br/><br/>
                 <div className='grid_container2' style={{columnGap: 75, marginLeft: 100}}>
                 <div className='grid_item' style={{width: 400}}>
                     <div className='subheader' style={{fontSize: 20}}>Final Logo</div>
@@ -98,7 +129,11 @@ function Pawfee() {
                 </div>
                 <div className='grid_item'>
                     <img className={`lazy-load fade-in ${loadedImages[revision02] ? 'loaded' : ''}`}
-                         data-src={revision02} style={{width: 260}}/>
+                         data-src={revision02}
+                         style={{width: 260}}
+                         onClick={() => openModal(revision02)}
+                         alt='Final Logo Design'
+                         />
                 </div>
             </div>
             </div>
@@ -175,7 +210,11 @@ function Pawfee() {
 <br/>
 {/* draw more to make a slideshow ? */}
                 <img className={`lazy-load fade-in ${loadedImages[draftDrinks] ? 'loaded' : ''}`}
-                     data-src={draftDrinks} style={{width: 800, marginLeft: 50}} />
+                     data-src={draftDrinks} 
+                     style={{width: 800, marginLeft: 50}}
+                     onClick={() => openModal(draftDrinks)}
+                     alt='Concept art of pawfee drinks' 
+                     />
                 <p style={{fontFamily: 'Rubik', textAlign: 'center'}}>Concept art of coffee drinks</p>
             </div>
 
@@ -189,9 +228,9 @@ function Pawfee() {
                 </div>
             </div>
 <br/><br/>
-            <div className='sub_container'>
-                <BackToTop/>
-            </div>
+            <div className='sub_container'><BackToTop/></div>
+
+            <Modal isOpen={isModalOpen} onClose={closeModal} imageSrc={selectedImage} />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import '../../stylesheets/page.css'
 import '../../stylesheets/slideshow.css'
+import '../../stylesheets/modal.css'
 
 import mura1_emotes from '../../assets/vtuber/mura1_emotes.png'
 import mura1_fullbody from '../../assets/vtuber/mura1_fullbody.png'
@@ -17,35 +18,20 @@ import mura2_vector from '../../assets/vtuber/mura2_vector.jpeg'
 
 import React, { useRef, useEffect, useState } from 'react';
 import { BackToTop } from '../BackToTop'
+import { Modal } from '../Modal'
 
 function Vtuber() {
     const [isOpen, setIsOpen] = useState(false)
-    
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen)
-    }
-
-// Slideshow logic
-    const [slideIndex, setSlideIndex] = useState(0);
-
-    const nextSlide = () => {
-    setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    };
-
-    const prevSlide = () => {
-    setSlideIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
-    };
-
-    const slides = [
-    <img key={1} src={mura2_fullbody01} style={{ width: 410 }} />,
-    <img key={2} src={mura2_fullbody02} style={{ width: 410 }} />,
-    <img key={3} src={mura2_fullbody03} style={{ width: 410 }} />,
-    ];
-
-// Lazy load
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [selectedImage, setSelectedImage] = useState(null)
     const [loadedImages, setLoadedImages] = useState({});
     const observer = useRef(null);
+    
+    // const toggleDropdown = () => {
+    //     setIsOpen(!isOpen)
+    // }
 
+    // Lazy load
     useEffect(() => {
         const options = {
             root: null,
@@ -79,6 +65,34 @@ function Vtuber() {
         });
     };
 
+    // Enlarge image when clicked on
+    const openModal = (imageSrc) => {
+        setSelectedImage(imageSrc)
+        setIsModalOpen(true)
+    }
+
+    const closeModal = () => {
+        setIsModalOpen(false)
+        setSelectedImage(null)
+    }
+
+    // Slideshow logic
+    const [slideIndex, setSlideIndex] = useState(0);
+
+    const nextSlide = () => {
+    setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+    setSlideIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+    };
+
+    const slides = [
+        <img key={1} src={mura2_fullbody01} style={{ width: 410, cursor: 'pointer' }} onClick={() => openModal(mura2_fullbody01)}/>,
+        <img key={2} src={mura2_fullbody02} style={{ width: 410, cursor: 'pointer' }} onClick={() => openModal(mura2_fullbody02)}/>,
+        <img key={3} src={mura2_fullbody03} style={{ width: 410, cursor: 'pointer' }} onClick={() => openModal(mura2_fullbody03)}/>,
+    ];
+
     return (
         <div className='main_container'>
             <div className="header">VTuber: Murase Lune</div>
@@ -98,7 +112,11 @@ function Vtuber() {
                     assets for streaming and for the associated social media accounts.<br/><br/>
                     
                     <img className={`lazy-load fade-in ${loadedImages[mura1_ref] ? 'loaded' : ''}`}
-                         data-src={mura1_ref} style={{marginLeft: 50, width: 800}}/>
+                         data-src={mura1_ref} 
+                         style={{marginLeft: 20, width: 850}}
+                         onClick={() => openModal(mura1_ref)}
+                         alt='First design of Murase Lune'
+                         />
                 </div>
             </div>
 
@@ -116,7 +134,11 @@ function Vtuber() {
                 <div className='grid_container2' style={{gap: 20, marginLeft: 30}}>
                     <div className='grid_item'>
                         <img className={`lazy-load fade-in ${loadedImages[mura2_vector] ? 'loaded' : ''}`}
-                             data-src={mura2_vector} style={{width: 400}}/>
+                             data-src={mura2_vector} 
+                             style={{width: 400}}
+                             onClick={() => openModal(mura2_vector)}
+                             alt='Vector Portrait'
+                             />
                     </div>
 
                     <div className='grid_item'>
@@ -135,6 +157,8 @@ function Vtuber() {
             </div>
 
             <div className='sub_container'><BackToTop/></div>
+
+            <Modal isOpen={isModalOpen} onClose={closeModal} imageSrc={selectedImage} />
         </div>
         )
 }

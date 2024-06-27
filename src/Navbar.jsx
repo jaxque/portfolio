@@ -38,7 +38,11 @@ function Navbar() {
             <NavLink to='/portfolio/chara'>
                 <div className='subheading'>Character Design</div>
             </NavLink>
-
+            
+            <NavLink to='/portfolio/dnx'>
+                <div className='subheading'>Dueling Nexus</div>
+            </NavLink>
+            
             <NavLink to='/portfolio/capstone'>
                 <div className='subheading'>Geo: Hello-Sol</div>
             </NavLink>
