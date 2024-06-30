@@ -84,16 +84,17 @@ function DNX() {
         setSlideIndex(index);
     };
 
+    // Images in slideshow
     const slides = [
-        <img key={1} src={fire_banner} style={{ width: 750 }} />,
-        <img key={2} src={water_banner} style={{ width: 750 }} />,
-        <img key={3} src={earth_banner} style={{ width: 750 }} />,
-        <img key={4} src={wind_banner} style={{ width: 750 }} />,
-        <img key={5} src={light_banner} style={{ width: 750 }} />,
-        <img key={6} src={dark_banner} style={{ width: 750 }} />,
-        <img key={7} src={divine_banner} style={{ width: 750 }} />,
-        <img key={8} src={spell_banner} style={{ width: 750 }} />,
-        <img key={9} src={trap_banner} style={{ width: 750 }} />,
+        <img key={1} src={fire_banner} style={{ width: 900 }} />,
+        <img key={2} src={water_banner} style={{ width: 900 }} />,
+        <img key={3} src={earth_banner} style={{ width: 900 }} />,
+        <img key={4} src={wind_banner} style={{ width: 900 }} />,
+        <img key={5} src={light_banner} style={{ width: 900 }} />,
+        <img key={6} src={dark_banner} style={{ width: 900 }} />,
+        <img key={7} src={divine_banner} style={{ width: 900 }} />,
+        <img key={8} src={spell_banner} style={{ width: 900 }} />,
+        <img key={9} src={trap_banner} style={{ width: 900 }} />,
     ];
 
     return (
@@ -105,26 +106,26 @@ function DNX() {
                     Freelance work for Dueling Nexus (<a href={'https://duelingnexus.com/'} target='_blank'>duelingnexus.com</a>).
                 </div>
 <br/>
-                <div className='grid_container2' style={{alignItems: 'center', columnGap: 10 }}>
-                    <div className='grid_item'>
-                        <img className={`lazy-load fade-in ${loadedImages[ranked] ? 'loaded' : ''}`}
-                             data-src={ranked} 
-                             style={{width: 445}}
-                             onClick={() => openModal(ranked)}
-                             alt='Ranked Banner'
-                             />
-                    </div>
-                    <div className='grid_item'>
-                        <img className={`lazy-load fade-in ${loadedImages[custom_games] ? 'loaded' : ''}`}
-                             data-src={custom_games} 
-                             style={{width: 445}}
-                             onClick={() => openModal(custom_games)}
-                             alt='Custom Games Banner'
-                             />
-                    </div>
-                </div>
-<br/><br/>             
                 <div className='content'>
+                    <img className={`lazy-load fade-in ${loadedImages[ranked] ? 'loaded' : ''}`}
+                             data-src={ranked} 
+                             style={{width: 900}}
+                             onClick={() => openModal(ranked)}
+                             alt='Ranked Banner'/>
+
+                    <img className={`lazy-load fade-in ${loadedImages[custom_games] ? 'loaded' : ''}`}
+                                data-src={custom_games} 
+                                style={{width: 900}}
+                                onClick={() => openModal(custom_games)}
+                                alt='Custom Games Banner'/>
+
+                    <img className={`lazy-load fade-in ${loadedImages[quickplay] ? 'loaded' : ''}`}
+                                data-src={quickplay} 
+                                style={{width: 900}}
+                                onClick={() => openModal(quickplay)}
+                                alt='Quickplay Banner'/>
+
+                    {/* Slideshow */}
                     <div className='slideshow' style={{textAlign: 'center'}} >
                         {slides.map((slide, index) => (
                             <div key={index} className='slide' 
@@ -132,10 +133,10 @@ function DNX() {
                             > {slide} </div>
                         ))}
 
-                        <a className='prev' style={{backgroundColor: '#00000099', left: '-10px'}} 
+                        <a className='prev' style={{backgroundColor: '#00000099', left: '0px'}} 
                            onClick={prevSlide}>&#8249;</a>
 
-                        <a className='next' style={{backgroundColor: '#00000099', right: '-10px'}} 
+                        <a className='next' style={{backgroundColor: '#00000099', right: '0px'}} 
                            onClick={nextSlide}>&#8250;</a>
 
                         <div>
@@ -148,24 +149,15 @@ function DNX() {
                             ))}
                         </div>
                     </div>
-                </div>
 <br/>
-                <div className='grid_container2' style={{alignItems: 'center', columnGap: 10 }}>
-                    <div className='grid_item'>
-                        <img className={`lazy-load fade-in ${loadedImages[quickplay] ? 'loaded' : ''}`}
-                             data-src={quickplay} 
-                             style={{width: 445}}
-                             onClick={() => openModal(quickplay)}
-                             alt='Quickplay Banner'/>
-                    </div>
-                    <div className='grid_item'>
-                        <img className={`lazy-load fade-in ${loadedImages[nyx_fumo] ? 'loaded' : ''}`}
+                    <img className={`lazy-load fade-in ${loadedImages[nyx_fumo] ? 'loaded' : ''}`}
                              data-src={nyx_fumo} 
-                             style={{width: 445}}
+                             style={{width: 900}}
                              onClick={() => openModal(nyx_fumo)}
                              alt='Nyx Fumo Plush Design'/>
-                    </div>
-                </div>
+                </div>           
+
+                    
             </div>
 
             <div className='sub_container'><BackToTop/></div>

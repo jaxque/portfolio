@@ -11,18 +11,22 @@ function VideoEdit() {
                 </div>
 <br/>
                 <div className='grid_container2' style={{gap: 10}}>
+                    {/* Geo - Hello-Sol */}
                     <div className='grid_item'>
                         <iframe width='445' height='250' style={{border: 'none'}}
                                 src='https://youtube.com/embed/dO8UVltBteg'></iframe>
                     </div>
+                    {/* VR Short Film */}
                     <div className='grid_item'>
                         <iframe width='445' height='250' style={{border: 'none'}}
                                 src='https://youtube.com/embed/sQ0IDPTl7RU'></iframe>
                     </div>
+                    {/* Urban Sounds */}
                     <div className='grid_item'>
                         <iframe width='445' height='250' style={{border: 'none'}}
                                 src='https://youtube.com/embed/mNJrKrToMHo'></iframe>
                     </div>
+                    {/* Quarantine Short Film */}
                     <div className='grid_item'>
                         <iframe width='445' height='250' style={{border: 'none'}}
                                 src='https://youtube.com/embed/EM-A3xdj_J8'></iframe>

@@ -6,6 +6,7 @@ import graphic from '../../assets/graphic-design/catbot_icon.png'
 import illust from '../../assets/illustrations/headshot_lum.png'
 import geo from '../../assets/geo/geo-black.png'
 import reynbow from '../../assets/reynbow/reynbow_icon_01.png'
+import video_thumbnail from '../../assets/video_thumbnail.png'
 import other from '../../assets/other-art/winter_redcardinal_illust.png'
 import pawfee from '../../assets/pawfee/revision_02.png'
 import mura from '../../assets/vtuber/mura2_vector.jpeg'
@@ -45,6 +46,7 @@ function PortfolioGrid() {
                 </div>
 
                 <div className='grid_item'>
+                    <a href='/portfolio/video'><img className='grid_img' src={video_thumbnail}/></a>
                     <div className='desc'>Video Editing</div>
                 </div>
 

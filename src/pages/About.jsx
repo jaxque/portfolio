@@ -14,6 +14,7 @@ function About() {
                     Skilled in both front-end and back-end web development as well possess a keen sense in graphic design.
                     <br/><br/>
                     Preferred name: Jacque <br/>
+                    Gender: Non-binary <br/>
                     Pronouns: he/him, they/them <br/>
                     Ethnicity: Korean
                 </div>
