@@ -83,10 +83,10 @@ function GraphicDesign() {
             <div className='sub_container'>
                 <div className='subheader'>Twitch Panels</div>
                 
-                <div className='grid_container2' style={{gap: 10, marginLeft: 2}}>
-                    <div className='grid_item'><img src={floopPanels}   style={{width: 466}} onClick={() => openModal(floopPanels)}/></div>
+                <div className='grid_container2' style={{gap: 10, marginLeft: 2, alignItems: 'center'}}>
+                    <div className='grid_item'><img src={floopPanels}   style={{width: 460}} onClick={() => openModal(floopPanels)}/></div>
                     <div className='grid_item'><img src={mura2_panels}  style={{width: 420}} onClick={() => openModal(mura2_panels)}/></div>
-                    <div className='grid_item'><img src={soma2_panels}  style={{width: 420}} onClick={() => openModal(soma2_panels)}/></div>
+                    <div className='grid_item'><img src={soma2_panels}  style={{width: 460}} onClick={() => openModal(soma2_panels)}/></div>
                     <div className='grid_item'><img src={soma1_panels}  style={{width: 420}} onClick={() => openModal(soma1_panels)}/></div>
                 </div>
             </div>
@@ -94,11 +94,11 @@ function GraphicDesign() {
             <div className='sub_container'>
                 <div className='subheader'>Logos & Icons</div>
 
-                <div className='grid_container2' style={{gap: 20, alignItems: 'center'}} >
+                <div className='grid_container2' style={{gap: 30, alignItems: 'center', marginLeft: 80}} >
                     <div className='grid_item'><img src={catbot}     style={{width: 350}} onClick={() => openModal(catbot)}/></div>
                     <div className='grid_item'><img src={cherii_icon} style={{width: 350}} onClick={() => openModal(cherii_icon)}/></div>
                 </div>
-                <img src={genshin_icons} style={{width: 800}}  onClick={() => openModal(genshin_icons)} />
+                <img src={genshin_icons} style={{width: 800, marginLeft: 50}}  onClick={() => openModal(genshin_icons)} />
             </div>
 
             <div className='sub_container'><BackToTop/></div>
