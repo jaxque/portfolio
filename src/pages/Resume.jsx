@@ -22,7 +22,7 @@ function Resume() {
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Freelance Graphic Designer & Illustrator </b >&nbsp;|&nbsp; Deuling Nexus
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         Dec 2023 - Present
                     </group><br/>
@@ -33,7 +33,7 @@ function Resume() {
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Retail Salesperson</b >&nbsp;|&nbsp; Team Aquatic Supplies - Ottawa, ON
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                         Sept 2022 - Feb 2024
                     </group><br/>
                     • &nbsp; Assisted customers to find the right fit and what they need<br/>
@@ -47,8 +47,7 @@ function Resume() {
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Backend Web Developer</b >&nbsp;|&nbsp; Carleton University - Ottawa, ON
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
-                        &nbsp; &nbsp;
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp;
                         Sept 2023 - April 2024
                     </group><br/>
                     Collaborative project to develop an interactive website that advertises a fictitious car brand.<br/>
@@ -59,8 +58,8 @@ function Resume() {
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Video Editor</b >&nbsp;|&nbsp; Carleton University - Ottawa, ON
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
-                        &emsp; &emsp; &emsp; &emsp; &emsp;
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                        &emsp; &emsp; &emsp; &emsp;
                         Nov 2022 - Dec 2022
                     </group><br/>
                     Group project to create a short film about living in a VR world.<br/>
@@ -71,8 +70,8 @@ function Resume() {
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Video Editor</b >&nbsp;|&nbsp; Algonquin College - Ottawa, ON
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                        &emsp; &emsp; &emsp; &emsp; &nbsp;
                         Nov 2020 - Dec 2020
                     </group><br/>
                     Joint project to create a short film about the daily life of a university student in quarantine.<br/>
@@ -84,7 +83,7 @@ function Resume() {
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Database Developer & Web Designer</b >&nbsp;|&nbsp; Carleton University - Ottawa, ON
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;
                         Sept 2020 - Dec 2020
                     </group><br/>
                     Collaborative project to develop a database website for a fictitious chocolate company.<br/>
@@ -100,7 +99,7 @@ function Resume() {
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
                         <b>Carleton University</b> - Ottawa, ON
                         &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp;
+                        &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp;
                         Sept 2019 - April 2024
                     </group><br/>
                     Bachelor of Information Technology - Interactive Multimedia & Design <br/>
@@ -114,10 +113,10 @@ function Resume() {
                 <div className='subheader'>Skills & Qualifications</div>
                 <div className='content'>
                     • &nbsp; Proficient in using Google apps and Microsoft apps<br/>
-                    • &nbsp; Experienced in using Adobe Photoshop and Premiere Pro<br/>
-                    • &nbsp; Knowledgeable in web development &#40; HTML, CSS, JavaScript, React &#41;<br/>
-                    • &nbsp; Familiar with using Figma and Canva<br/>
-                    • &nbsp; Excellent communication and cooperation skills<br/>
+                    • &nbsp; Experienced in using Adobe apps, Canva, Figma, and Procreate<br/>
+                    • &nbsp; Knowledgeable in web development &#40; HTML, CSS, JavaScript, React, Vite &#41;<br/>
+                    • &nbsp; Excellent communication, cooperation, and organization<br/>
+                    • &nbsp; Quick to adapt and solve problems<br/>
                     • &nbsp; Eager to meet new people and learn new technologies<br/>
                     • &nbsp; Languages: English, French, Korean
                 </div>
