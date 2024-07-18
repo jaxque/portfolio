@@ -21,7 +21,7 @@ function Resume() {
                 <div className='subheader'>Work Experience</div>
                 <div className='content'>
                     <group style={{borderStyle:'none none solid none', borderWidth: 2, borderColor: '#bfb8d4'}}>
-                        <b>Freelance Graphic Designer & Illustrator </b >&nbsp;|&nbsp; Deuling Nexus
+                        <b>Freelance Graphic Designer & Illustrator </b >&nbsp;|&nbsp; Dueling Nexus
                         &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         Dec 2023 - Present
