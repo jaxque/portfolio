@@ -109,19 +109,19 @@ function DNX() {
                 <div className='content'>
                     <img className={`lazy-load fade-in ${loadedImages[ranked] ? 'loaded' : ''}`}
                              data-src={ranked} 
-                             style={{width: 900}}
+                             style={{width: 900, cursor: 'pointer'}}
                              onClick={() => openModal(ranked)}
                              alt='Ranked Banner'/>
 
                     <img className={`lazy-load fade-in ${loadedImages[custom_games] ? 'loaded' : ''}`}
                                 data-src={custom_games} 
-                                style={{width: 900}}
+                                style={{width: 900, cursor: 'pointer'}}
                                 onClick={() => openModal(custom_games)}
                                 alt='Custom Games Banner'/>
 
                     <img className={`lazy-load fade-in ${loadedImages[quickplay] ? 'loaded' : ''}`}
                                 data-src={quickplay} 
-                                style={{width: 900}}
+                                style={{width: 900, cursor: 'pointer'}}
                                 onClick={() => openModal(quickplay)}
                                 alt='Quickplay Banner'/>
 
@@ -152,7 +152,7 @@ function DNX() {
 <br/>
                     <img className={`lazy-load fade-in ${loadedImages[nyx_fumo] ? 'loaded' : ''}`}
                              data-src={nyx_fumo} 
-                             style={{width: 900}}
+                             style={{width: 900, cursor: 'pointer'}}
                              onClick={() => openModal(nyx_fumo)}
                              alt='Nyx Fumo Plush Design'/>
                 </div>           

@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    list-style: none;
+}
+
 .main_container {
     width: 100%;
     max-width: 1000px;
