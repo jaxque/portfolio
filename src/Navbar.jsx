@@ -33,49 +33,68 @@ function Navbar() {
                 <div className='heading'>Portfolio</div>
             </NavLink>
 
-            <br/>
-
+            {/* Subheadings */}
             <NavLink to='/portfolio/chara'>
-                <div className='subheading'>Character Design</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Character Design</span>
+                </div>
             </NavLink>
             
             <NavLink to='/portfolio/dnx'>
-                <div className='subheading'>Dueling Nexus</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Dueling Nexus</span>
+                </div>
             </NavLink>
             
             <NavLink to='/portfolio/capstone'>
-                <div className='subheading'>Geo: Hello-Sol</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Geo: Hello-Sol</span>
+                </div>
             </NavLink>
 
             <NavLink to='/portfolio/graphic'>
-                <div className='subheading'>Graphic Design</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Graphic Design</span>
+                </div>
             </NavLink>
 
             <NavLink to='/portfolio/illust'>
-                <div className='subheading'>Illustrations</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Illustrations</span>
+                </div>
             </NavLink>
 
             <NavLink to='/portfolio/pawfee'>
-                <div className='subheading'>Pawfee Beans</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Pawfee Beans</span>
+                </div>
             </NavLink>
 
             <NavLink to='/portfolio/reynbow'>
-                <div className='subheading'>Reynbow</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Reynbow</span>
+                </div>
             </NavLink>
 
             <NavLink to='/portfolio/video'>
-                <div className='subheading'>Video Editing</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Video Editing</span>
+                </div>
             </NavLink>
 
             <NavLink to='/portfolio/vtuber'>
-                <div className='subheading'>VTuber: Murase Lune</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>VTuber: Murase Lune</span>
+                </div>
             </NavLink>
 
             <NavLink to='/portfolio/other'>
-                <div className='subheading'>Other Art</div>
+                <div className='subheading_container'>
+                    <span className='subheading'>Other Art</span>
+                </div>
             </NavLink>
 
-            <br/><br/><br/>
+            <br/><br/>
 
             {/* Contact Info */}
             <NavLink to='/portfolio/contact' >

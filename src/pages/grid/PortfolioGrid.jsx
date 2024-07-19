@@ -1,10 +1,10 @@
 import '../../stylesheets/page.css'
 
 import chara from '../../assets/chara-design/chara_02.png'
-import dnx_banner from '../../assets/dnx/ranked_banner.png'
+import dnx_thumbnail from '../../assets/dnx/melodious_avatar.png'
 import graphic from '../../assets/graphic-design/catbot_icon.png'
 import illust from '../../assets/illustrations/headshot_lum.png'
-import geo from '../../assets/geo/geo-black.png'
+import geo from '../../assets/geo/geo_black.png'
 import reynbow from '../../assets/reynbow/reynbow_icon_01.png'
 import video_thumbnail from '../../assets/video_thumbnail.png'
 import other from '../../assets/other-art/winter_redcardinal_illust.png'
@@ -21,7 +21,7 @@ function PortfolioGrid() {
                 </div>
 
                 <div className='grid_item'>
-                    <a href='/portfolio/dnx'><img className='grid_img' src={dnx_banner} style={{objectFit: 'contain'}}/></a>
+                    <a href='/portfolio/dnx'><img className='grid_img' src={dnx_thumbnail} style={{objectFit: 'contain'}}/></a>
                     <div className='desc'>Dueling Nexus</div>
                 </div>
 
