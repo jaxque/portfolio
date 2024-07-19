@@ -27,7 +27,7 @@ function Resume() {
                                 <group style={{textAlign: 'right', fontWeight: 400}}>
                                 &nbsp; |&nbsp; Dueling Nexus</group>
                             </th>
-                            <th style={{textAlign: 'right', fontWeight: 400}}>Dec 2023 - Present</th>
+                            <th className='a' style={{textAlign: 'right', fontWeight: 400}}>Dec 2023 - Present</th>
                         </tr>
                     </table>
                     • &nbsp; Created stylized banner illustrations for website visuals and buttons <br/>
@@ -41,7 +41,7 @@ function Resume() {
                                 <group style={{textAlign: 'right', fontWeight: 400}}>
                                 &nbsp; |&nbsp; Team Aquatic Supplies - Ottawa, ON</group>
                             </th>
-                            <th style={{textAlign: 'right', fontWeight: 400}}>Sept 2022 - 2024</th>
+                            <th className='a' style={{textAlign: 'right', fontWeight: 400}}>Sept 2022 - 2024</th>
                         </tr>
                     </table>
                     • &nbsp; Assisted customers to find the right fit and what they need<br/>
@@ -59,7 +59,7 @@ function Resume() {
                                 <group style={{textAlign: 'right', fontWeight: 400}}>
                                 &nbsp; |&nbsp; Carleton University - Ottawa, ON</group>
                             </th>
-                            <th style={{textAlign: 'right', fontWeight: 400}}>Sept 2023 - April 2024</th>
+                            <th className='a' style={{textAlign: 'right', fontWeight: 400}}>Sept 2023 - April 2024</th>
                         </tr>
                     </table>
                     Collaborative project to develop an interactive website that advertises a fictitious car brand.<br/>
@@ -74,7 +74,7 @@ function Resume() {
                                 <group style={{textAlign: 'right', fontWeight: 400}}>
                                 &nbsp; |&nbsp; Carleton University - Ottawa, ON</group>
                             </th>
-                            <th style={{textAlign: 'right', fontWeight: 400}}>Nov 2022 - Dec 2022</th>
+                            <th className='a' style={{textAlign: 'right', fontWeight: 400}}>Nov 2022 - Dec 2022</th>
                         </tr>
                     </table>
                     Group project to create a short film about living in a VR world.<br/>
@@ -89,7 +89,7 @@ function Resume() {
                                 <group style={{textAlign: 'right', fontWeight: 400}}>
                                 &nbsp; |&nbsp; Algonquin College - Ottawa, ON</group>
                             </th>
-                            <th style={{textAlign: 'right', fontWeight: 400}}>Nov 2020 - Dec 2020</th>
+                            <th className='a' style={{textAlign: 'right', fontWeight: 400}}>Nov 2020 - Dec 2020</th>
                         </tr>
                     </table>
                     Joint project to create a short film about the daily life of a university student in quarantine.<br/>
@@ -105,7 +105,7 @@ function Resume() {
                                 <group style={{textAlign: 'right', fontWeight: 400}}>
                                 &nbsp; |&nbsp; Carleton University - Ottawa, ON</group>
                             </th>
-                            <th style={{textAlign: 'right', fontWeight: 400}}>Sept 2020 - Dec 2020</th>
+                            <th className='a' style={{textAlign: 'right', fontWeight: 400}}>Sept 2020 - Dec 2020</th>
                         </tr>
                     </table>
                     Collaborative project to develop a database website for a fictitious chocolate company.<br/>
@@ -123,7 +123,7 @@ function Resume() {
                             <th className='a'>Carleton University
                                 <group style={{textAlign: 'right', fontWeight: 400}}> - Ottawa, ON</group>
                             </th>
-                            <th style={{textAlign: 'right', fontWeight: 400}}>Sept 2019 - April 2024</th>
+                            <th className='a' style={{textAlign: 'right', fontWeight: 400}}>Sept 2019 - April 2024</th>
                         </tr>
                     </table>
                     Bachelor of Information Technology - Interactive Multimedia & Design <br/>
