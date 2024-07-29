@@ -34,7 +34,7 @@ function About() {
                     {/* Row 2 */}
                     <tr>
                         <td style={{paddingBottom: 15}}> • &nbsp; Live streaming     </td>
-                        <td style={{paddingBottom: 15}}> • &nbsp; Custsom keyboards  </td>
+                        <td style={{paddingBottom: 15}}> • &nbsp; Custom keyboards  </td>
                     </tr>
 
                     {/* Row 3 */}
