@@ -80,7 +80,6 @@
     font-family: 'Expletus Sans';
     font-size: 20px;    
     letter-spacing: 0;
-    text-align: center;
 
     color: grey;
     opacity: 0.6;
@@ -96,7 +95,7 @@
 .heading::before, .heading::after {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 0%;
     width: 0;
     border: 1px solid rgba(156, 124, 203, 0);
     transition: all 0.3s ease-in-out;
@@ -111,14 +110,14 @@
 }
 
 .heading:hover::before, .heading:hover::after {
-    width: 70%;
-    left: 15%; /* center lines to text */
+    width: 50%;
+    left: 0%;
     border-color: #c7b9ec;
 }
 
 .subheading_container {
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
 .subheading {
@@ -130,7 +129,7 @@
     font-family: 'Rubik';  
     font-size: 16px;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 
     color: grey;
     opacity: 0.6;
@@ -145,19 +144,18 @@
 .subheading::before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 2px;
     border-radius: 4px;
     background-color: #c7b9ec;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0); /* Center the underline and start from the center */
-    transform-origin: center;
-    transition: transform .3s ease-in-out;
+    left: 0%;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
-.subheading:hover::before {
-    transform: translateX(-50%) scaleX(1);
+.subheading:hover::before, .subheading:active::before {
+    width: 100%;  /* Expands on hover */
+    left: 0%;
 }
 
 a:link { text-decoration: none; }

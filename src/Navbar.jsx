@@ -39,18 +39,6 @@ function Navbar() {
                     <span className='subheading'>Character Design</span>
                 </div>
             </NavLink>
-            
-            <NavLink to='/portfolio/dnx'>
-                <div className='subheading_container'>
-                    <span className='subheading'>Dueling Nexus</span>
-                </div>
-            </NavLink>
-            
-            <NavLink to='/portfolio/capstone'>
-                <div className='subheading_container'>
-                    <span className='subheading'>Geo: Hello-Sol</span>
-                </div>
-            </NavLink>
 
             <NavLink to='/portfolio/graphic'>
                 <div className='subheading_container'>
@@ -64,33 +52,9 @@ function Navbar() {
                 </div>
             </NavLink>
 
-            <NavLink to='/portfolio/pawfee'>
-                <div className='subheading_container'>
-                    <span className='subheading'>Pawfee Beans</span>
-                </div>
-            </NavLink>
-
-            <NavLink to='/portfolio/reynbow'>
-                <div className='subheading_container'>
-                    <span className='subheading'>Reynbow</span>
-                </div>
-            </NavLink>
-
             <NavLink to='/portfolio/video'>
                 <div className='subheading_container'>
                     <span className='subheading'>Video Editing</span>
-                </div>
-            </NavLink>
-
-            <NavLink to='/portfolio/vtuber'>
-                <div className='subheading_container'>
-                    <span className='subheading'>VTuber: Murase Lune</span>
-                </div>
-            </NavLink>
-
-            <NavLink to='/portfolio/other'>
-                <div className='subheading_container'>
-                    <span className='subheading'>Other Art</span>
                 </div>
             </NavLink>
 

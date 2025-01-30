@@ -64,13 +64,18 @@ td {
     font-family: 'Rubik';
 }
 
+.portfolio_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
 .grid_container {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: auto auto auto;
 }
 
 .grid_container2 {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: auto auto;
 }
 
@@ -79,8 +84,8 @@ td {
 }
 
 .grid_img {
-    width: 280px;
-    height: 280px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
     border-radius: 5%;
     transition: transform 0.3s;
